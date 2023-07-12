@@ -1,0 +1,43 @@
+<!-- {
+    "name":"radha",
+    "age":23,
+    "dist":"ariyalur",
+    "address":{
+        "no":23,
+        "street":"north"
+    },
+    "phone":[{
+        "type":"house",
+        "-":93566666
+    },
+    {
+        "type":"mine",
+        "-":9356666600
+    }],
+    "email":"rooo@gmail.com"
+} -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <div id="output1"></div>
+    <div id="output2"></div>
+</body>
+<script>
+    var myObj={
+        "first":"radha",
+        "last":"M",
+        "age":23
+    }
+    var output1=document.getElementById('output1');
+    var output2=document.getElementById('output2');
+    output1.innerHTML=myObj.first;
+    output2.innerHTML=myObj.last;
+</script>
+</html>
