@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+    <style>
+        .red{
+             background-color: red;
+             color:white;
+        }
+        .blue{
+            padding:20px 20px;
+            border:2px solid orange;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="one">Freedom of India</h1>
+    <p clas="para">Freedom is often associated with liberty and autonomy in the sense of "giving oneself one's own laws".</p>
+    <ul>
+        <li>What do you mean by freedom?</li>
+        <li>What is the importance of freedom?</li>
+        <li>What are the 3 types of freedom?</li>
+    </ul>
+    <script>
+         var ele1=document.getElementById('one');
+         ele1.style.background="yellow";
+         var ele2=document.getElementsByTagName('li');
+         console.log(ele2);
+         var ele3=document.getElementsByClassName('.para');
+         console.log(ele3);
+         var ele4=document.getElementsByTagName('li');
+         console.log(ele4);
+         var ele5=document.querySelector('li');
+         console.log(ele5);
+         var ele6=document.querySelector('p');
+         console.log(ele6);
+         ele6.className="red";
+         //class changes
+         ele7=document.querySelector('h1');
+         ele7.className="blue";
+    </script>
+</body>
+</html>

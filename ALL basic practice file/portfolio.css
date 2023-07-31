@@ -1,0 +1,110 @@
+.nav-section img{
+    height:20px;
+    weight:20px;
+    margin:10px;
+}
+.a-tag{
+    text-align: right;
+}
+.name{
+    color: red;
+}
+span{
+    color:white;
+}
+button{
+    background-color:indianred;
+    color:white;
+    border-radius: 5px;
+    border-color: white;
+}
+.radha-img img{
+    width:20px;
+}
+
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: blueviolet;
+    width:50%;
+    height:40%;
+    margin:auto;
+    color:white;
+}
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  .card img{
+    height:20%;
+    width:20%;
+    margin:20px;
+  }
+  /* .skill-img img{
+      width:10%;
+      float:right;
+      margin:1%;
+  } */
+
+  body{
+    background-color:cadetblue;
+  }
+
+  header{
+    background-color: white;
+  }
+  footer{
+    background-color: white;
+  }
+
+
+
+  p{
+    text-align: justify;
+  }
+
+  .foot-section img{
+    height:20px;
+    weight:20px;
+    margin:10px;
+}
+
+div.centered{
+    text-align: center;
+}
+
+.anchor-tag {
+    float:right;
+    margin:10px;
+    word-spacing: 10px;
+    color:black;
+  } 
+
+  a:link{
+    text-decoration: none;
+  }
+  a{
+    color:black;
+  }
+
+ .exp-img img{
+    width:100px;
+    height: 100px;
+ }
+
+ .html-container {
+    display: flex;
+ }
+  
+.css-container {
+    display: flex;
+}

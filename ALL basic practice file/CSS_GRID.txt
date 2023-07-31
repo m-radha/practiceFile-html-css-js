@@ -1,0 +1,264 @@
+/*---------------basic-properties----------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans&family=Inconsolata:wght@200;400&family=Lobster&family=Lobster+Two:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bangers', cursive;
+}
+
+.container {
+    border: 5px solid black;
+}
+
+.grid-items {
+    font-size: 15px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-1 {
+    background-color: aqua;
+}
+
+.box-2 {
+    background-color: blueviolet;
+}
+
+.box-3 {
+    background-color: brown;
+}
+
+.box-4 {
+    background-color: blue;
+}
+
+.box-5 {
+    background-color: chartreuse;
+}
+
+.box-6 {
+    background-color: darkorange;
+}
+
+.box-7 {
+    background-color: darkkhaki;
+}
+
+.box-8 {
+    background-color: olive;
+}
+
+.box-9 {
+    background-color: mediumseagreen;
+}
+
+/*---grid property--*/
+
+.container{
+    /*for col*/
+    display: grid;
+    grid-template-columns: 100px 200px 300px;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: repeat(3,200px);
+    grid-template-columns: repeat(3,200px) 300px;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: repeat(3,minmax(100px,1fr));
+
+    /* for row */
+    height: 600px;
+    grid-template-columns: repeat(3,1fr);
+
+    /*for both row and col*/
+    /* grid-template: repeat(3,1fr) / repeat(4,1fr); */
+
+    /* gap */
+    column-gap: 20px;
+    row-gap: 20px;
+    gap:20px 40px;
+    gap:20px;
+
+    /* justify-items -> Horizondal axis align 
+       align-item -> Vertical axis align
+
+       justify-content -> X axis
+       align-content -> Y axis
+    */
+    justify-items: center;
+    align-items: center;
+
+    /* place-items -> combination of align-item and justify-item */
+    /* place-items: center start;
+    place-items: end; */
+    justify-items: space-between;
+    align-content: space-between;
+    
+    /* place-content -> combination of align-content and justify-content */
+    place-content: center end;
+}
+
+.container{
+    /*for col*/
+
+    display: grid;
+    grid-auto-rows: row;
+    grid-auto-rows: 100px;
+    grid-auto-flow: column;
+    grid-auto-columns:100px ;
+
+
+    grid-template: repeat(3,200px)/repeat(3,200px);
+
+    /* merge boxes */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-column-end: span 3;
+    grid-column: 1 / span 2;
+
+    justify-self: stretch;
+    justify-self: end;
+    justify-self: center;
+
+    align-self: center;
+
+    /* place self --> combination of [justify-self and align-self]*/
+    place-self: center;
+
+    /* template-area*/
+    
+
+}
+
+
+// for header,content,nav,sidebar,footer
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans&family=Inconsolata:wght@200;400&family=Lobster&family=Lobster+Two:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Lobster Two', cursive;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+      'head head head'
+      'navigation content sidebar'
+      'foot foot foot'
+    ;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 100px 1fr 50px;
+}
+
+header,nav,main,aside,footer{
+    background-color: coral;
+    color:white;
+    text-align: center;
+    padding:20px;
+    display: grid;
+    border:1px solid white;
+}
+
+header{
+    grid-area: head;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+main{
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer{
+    grid-area: foot;
+}
+
+
+
+2nd --> header,nav,main,footer....
+============================================
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DM+Sans&family=Inconsolata:wght@200;400&family=Lobster&family=Lobster+Two:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Lobster Two', cursive;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+      'head head head'
+      'navigation content sidebar'
+      'foot foot foot'
+    ;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 100px 1fr 50px;
+}
+
+header,nav,main,aside,footer{
+    background-color: coral;
+    color:white;
+    text-align: center;
+    padding:20px;
+    display: grid;
+    border:1px solid white;
+}
+
+header{
+    grid-area: head;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+main{
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+footer{
+    grid-area: foot;
+}
+
+html
+-------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEADER-NAV-SIDEBAR-CONTENT-FOOTER</title>
+    <link rel="stylesheet" href="header-s-n-c-f.css">
+</head>
+<body>
+    <nav>nav</nav>
+    <header>Header</header>
+    <main>content</main>
+    <aside>sidebar</aside>
+    <aside class="aside1">aside1</aside>
+    <aside class="aside2">aside2</aside>
+    <aside class="aside3">aside3</aside>
+    <footer>footer</footer>
+</body>
+</html>
+
+
