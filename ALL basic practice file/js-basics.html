@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ALL BASICS</title>
+    <link rel="stylesheet" href="js-basics.css">
+</head>
+
+<body>
+    <div>
+        <h2>1> js will change html content</h2>
+        <p id="demo">welcome to this</p>
+        <button onclick="document.getElementById('demo').innerHTML='Hello user!'">click me to change text</button>
+    </div>
+    <div>
+        <h2>2> JS will change img src also through button</h2>
+        <img id="bulb_img" src="https://i.postimg.cc/KjK1wL3c/bulb-off.png" alt="bulb_off">
+        <button onclick="document.getElementById('bulb_img').src='pic_bulboff.gif'">turn-off-light</button>
+        <button onclick="document.getElementById('bulb_img').src='bub_on.gif'">turn-on-light</button>
+    </div>
+    <div>
+        <h2>3> from js we can render html content inside script</h2>
+        <p id="demo1"></p>
+        <script>
+            document.getElementById('demo1').innerHTML = 'paragraph rendered...'
+        </script>
+    </div>
+    <div>
+        <h2>4> using function we can change content using js</h2>
+        <p id="demo3">para 2</p>
+        <button onclick="myFunc()">function will change content</button>
+        <script>
+            function myFunc() {
+                document.getElementById('demo3').innerHTML = 'para 2 changed...'
+            }
+        </script>
+        <!-- instead of using script we can create js file separately and we can add here
+        <script src="some.js"></script> -->
+    </div>
+    <div>
+        <h1>content show in dom</h1>
+        <p id="demo4"></p>
+        <script>
+            window.alert('Hi radha i am from alert');
+            document.getElementById('demo4').innerHTML = 'hello radha I am from innerHtml';
+            document.write('I am from doc write');
+        </script>
+    </div>
+    <div>
+        <h2>Print page</h2>
+        <p>everything will happen for some reason</p>
+        <button onclick="window.print()">print</button>
+    </div>
+    <div>
+        <h2>button click content will change regarding button</h2>
+        <button onclick="myFunc1()">click-1</button>
+        <button onclick="myFunc2()">click-2</button>
+        <p id="demo5"></p>
+        <script>
+            function myFunc1() {
+                document.getElementById('demo5').innerHTML = 'Hello developer-1!!!';
+            }
+            function myFunc2() {
+                document.getElementById('demo5').innerHTML = 'welcome developer-2!!!';
+            }
+        </script>
+    </div>
+    <div>
+        <h2>call function</h2>
+        <p id="demo6"></p>
+        <script>
+            function myFunc3(a, b) {
+                return a + b;
+            }
+            let output = myFunc3(2, 3);
+            document.getElementById('demo6').innerHTML = output;
+        </script>
+    </div>
+    <div>
+        <h2>Object access</h2>
+        <p id="demo6"></p>
+        <script>
+            const person = {
+                first: "radha",
+                last: 'M',
+                age: 22,
+                hobby: 'drawing'
+            }
+            document.getElementById('demo6').innerHTML =
+                person.first + " " + person.last + " " + "welcome your are" + person.age + " " + "years old";
+        </script>
+    </div>
+    <div>
+        <h2>date get</h2>
+        <p id="demo7"></p>
+        <button onclick="document.getElementById('demo7').innerHTML=Date()">get time</button>
+    </div>
+    <!-- \'radha\', \"uma\",\\sarath\\ -->
+    <div>
+        <h2>change word in sentence</h2>
+        <p id="demo8">Hello user...sign-in</p>
+        <button onclick="myFunc4()">click-to-change-word</button>
+        <script>
+            function myFunc4() {
+                let text = document.getElementById('demo8').innerHTML;
+                document.getElementById('demo8').innerHTML = text.replace(/SIGN-IN/i, "Successfully signed");
+            }
+        </script>
+    </div>
+    <div>
+        <h2>Padding in Js</h2>
+        <p id="demo9"></p>
+        <script>
+            let text = "R";
+            text = text.padStart(9, "0");
+            document.getElementById("demo9").innerHTML = text;
+        </script>
+    </div>
+    <!-- when we want to add multiple content -> https://www.w3schools.com/js/tryit.asp?filename=tryjs_templates_html -->
+
+    <!-- DOM ACTIVITIES -->
+    <div>
+        <h2>Choose text from content join with another part</h2>
+        <p id="demo10">Hi radha...How r u?</p>
+        <p id="demo11"></p>
+        <script>
+            const element = document.getElementById("demo10");
+
+            document.getElementById("demo11").innerHTML =
+                "The text from the intro paragraph is: " + element.innerHTML;
+        </script>
+    </div>
+    <div>
+        <h1>FORM</h1>
+        <input id="name">
+        <button onclick="myFunc5()">submit</button>
+        <p id="demo12"></p>
+        <script>
+            function myFunc5(){
+                let NameValue=document.getElementById("name").value;
+                let x;
+                if(NameValue == " "){
+                    x="input not valid ..please fill";
+                }else{
+                    x=NameValue;
+                }
+            }
+            document.getElementById("demo12").innerHTML=x;
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click to Open HTML File</title>
+</head>
+<body>
+    <button id="openButton">Open HTML File</button>
+    <div id="contentContainer"></div>
+
+    <script>
+        // Function to load the linked HTML file into the contentContainer
+        function loadLinkedHTML() {
+            // You can specify the path to your linked HTML file here
+            const linkedHTMLPath = 'portfolio.html';
+
+            // Fetch the linked HTML file
+            fetch(linkedHTMLPath)
+                .then(response => response.text())
+                .then(data => {
+                    // Set the content of the contentContainer to the linked HTML file's content
+                    document.getElementById('contentContainer').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading linked HTML:', error);
+                });
+        }
+
+        // Attach click event listener to the button
+        document.getElementById('openButton').addEventListener('click', loadLinkedHTML);
+    </script>
+</body>
+</html>
